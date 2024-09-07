@@ -1,0 +1,65 @@
+{
+  "name": "landing-page",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --check src",
+    "format:fix": "prettier --write src",
+    "type-check": "tsc --noEmit",
+    "validate": "npm run lint && npm run format && npm run type-check",
+    "fix": "npm run lint:fix && npm run format:fix",
+    "lint:commit": "commitlint --from=HEAD~1 --to=HEAD",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "3.14.0",
+    "class-variance-authority": "0.7.0",
+    "clsx": "2.1.1",
+    "framer-motion": "11.3.30",
+    "lucide-react": "0.436.0",
+    "next": "14.2.6",
+    "react": "18",
+    "react-dom": "18",
+    "tailwind-merge": "2.5.2",
+    "tailwindcss-animate": "1.0.7",
+    "typescript": "4.7.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.4.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "eslint": "8",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "18.0.0",
+    "eslint-config-next": "14.2.6",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.9.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-react": "7.35.0",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "husky": "9.1.5",
+    "lint-staged": "15.2.9",
+    "postcss": "8",
+    "prettier": "3.3.3",
+    "tailwindcss": "3.4.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run fix"
+    ],
+    "src/**/*.{json,css}": [
+      "npm run format:fix"
+    ],
+    "src": [
+      "npm run validate"
+    ]
+  }
+}

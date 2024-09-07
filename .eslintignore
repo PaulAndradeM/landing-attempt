@@ -1,0 +1,9 @@
+# Ignore AceternityUI components and Config
+src/components/AceternityUI 
+src/lib/AceternityUI
+commitlint.config.ts
+next.config.mjs
+postcss.config.mjs
+tailwind.config.ts
+
+
